@@ -1,0 +1,506 @@
+
+/* importing google fonts */
+
+@font-face {
+    font-family: 'delius swash caps';
+    src: url(../assets/fonts/Delius_Swash_Caps/DeliusSwashCaps-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'delius swash caps';
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/homeBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.navbar {
+    font-family: 'delius swash caps';
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 10vh; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarBrand {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.navLinks {
+    list-style-type: none;
+
+    display: flex;
+}
+
+.navLink {
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background-color 300ms ease-out;
+
+    flex-shrink: 1 !important;
+}
+
+.navLink:hover {
+    background-color: whitesmoke;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.header .bgMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bgMask .introHeading {
+    color: rgba(255, 255, 255, .95);
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'delius swash caps';
+    line-height: 1.5;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+.bgMask .introText {
+    color: rgba(255, 255, 255, .95);
+    font-size: 20px;
+    text-align: center;
+    font-family: 'delius swash caps';
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 768px;
+    line-height: 1.5;
+}
+
+.bgMask .exploreBtn {
+    color: black;
+    font-size: 18px;
+    font-family: 'delius swash caps';
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: block;
+    text-decoration: none;
+    margin: 12px 0;
+    box-shadow:  2px 3px 3px rgba(0, 0, 0, 0.438);
+    transition: transform 300ms ease-out;
+}
+
+.exploreBtn:hover {
+    transform: translateY(-6px);
+}
+
+/* about section */
+
+.aboutSection {
+    background-color: #0f0f0f;
+    padding: 10vh 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.aboutSectHeading {
+    color: snow;
+    font-size: 2rem;
+    font-family: 'delius swash caps';
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 20px auto;
+
+}
+
+.sliderContainer {
+    width: 100%;
+    max-width: 870px;
+    margin: auto;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.aboutSectionSlider {
+    margin: auto;
+    display: flex;
+
+    transition: transform 1000ms ease-out;
+}
+
+.slide {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.slideTrackers {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracker {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.tracker.active {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+
+
+/* showcase section */
+
+.showcaseSection {
+    background-color: #0f0f0f;
+    padding: 10vh 20px;
+}
+
+.showcaseHeading {
+    color: white;
+    font-size: 2rem;
+    font-family: 'delius swash caps';
+    text-align: center;
+    margin: 10px auto;
+}
+
+.showcase {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    flex-basis: 330px;
+    /* flex-grow: 0; */
+    flex-shrink: 1;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+/* pricing section */
+
+.pricingSection {
+    background-color: #020414;
+    min-height: 100vh;
+    padding: 10vh 20px;
+}
+
+.priceSectHeading {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 25px auto;
+    /* margin-top: 25px; */
+}
+
+.accordion {
+    width: 100%;
+    max-width: 680px;
+    margin: auto;
+}
+
+.accordionItem {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+
+    transition: height 1s ease-out;
+}
+
+.openingIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(224, 241, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.accordionItemBg {
+    width: 100%;
+
+}
+
+.accordionItemBg img {
+    width: 100%;
+    display: block;
+}
+
+.priceDescription {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    padding: 0 30px;
+    line-height: 1.5;
+    color: white;
+    font-family: 'delius swash caps';
+    text-shadow: 2px 3px 5px black;
+    opacity: 0;
+    transition: top 1s ease-out,
+                opacity 1s ease-out;
+}
+
+.price {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.visible {
+    top: 75px;
+    opacity: 1;
+}
+
+/* contact section */
+
+.contactSect {
+    background-image: url(../images/formBg.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10vh 20px;
+    height: 100vh;
+}
+
+.formHeading {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin: 10px auto;
+}
+
+.form {
+    width: 80%;
+    max-width: 680px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.input  {
+    width: 100%;
+}
+
+input, textarea {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    width: 100%;
+    background-color: #0f0f0f7e;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 30px;
+    
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+textarea {
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.submit {
+    margin: auto;
+}
+
+.btn {
+    color: white;
+    font-size: 22px;
+    font-family: 'delius swash caps';
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: #0f0f0f9a;
+    padding: 6px 26px;
+    border-radius: 30px;
+    transition: transform 300ms ease-out 100ms;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    transform: translateY(-6px);
+}
+
+/* footer */
+
+.footer {
+    background-color: #000000;
+    padding: 1rem;
+}
+
+.footer .footerText {
+    color: #eee;
+    font-family: 'delius swash caps';
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+
+        
+        background-color: #ddd;
+        border-radius: 0 0 36px 36px;
+    }
+
+    .navbarBrand {
+        font-size: 20px;
+    }
+
+    .navLinks {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background-color: #ddd;
+        padding: 0 10px;
+        border-radius: 36px 36px 0 0;
+
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    .navLink {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .navLink:hover {
+        background-color: transparent;
+    }
+
+    .bgMask .introHeading {
+        font-size: 3rem;
+    }
+
+    .bgMask .introText {
+        font-size: 20px;
+    }
+
+    .aboutSection {
+        min-height: 80vh;
+    }
+
+    .footerText {
+        margin-bottom: 10vh;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .navLink {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .bgMask .introHeading {
+        font-size: 2.5rem;
+    }
+
+    .bgMask .introText {
+        font-size: 18px;
+    }
+    
+
+    .aboutSectHeading {
+        margin: 40px auto;
+    }
+
+    
+    
+    .priceDescription {
+        padding: 0 15px;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .navLink {
+        font-size: 16px;
+        font-weight: normal;
+    }    
+}
